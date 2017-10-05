@@ -1,4 +1,3 @@
-
 usertime = input("Enter Time: ")
 
 if("AM")in(usertime):
@@ -60,37 +59,37 @@ if("pm")in(usertime):
         print(mpmtime)
 
 
-if not ":"  in (usertime) or not "am"  in (usertime) or not "a.m." in (usertime) or not "A.M." in (usertime) or not "AM" in (usertime) or not "pm" in (usertime) or not "PM" in (usertime) or not "P.M." in (usertime) or not "p.m." in (usertime):
-	if len(usertime) == 4:
-
-		if int(usertime) <= int(959):
-			mtime3 = list(str(usertime))
-			mtime2 = (mtime3[1]) + (":") + (mtime3[2]) + (mtime3[3]) + (" A.M.")
-			print(mtime2)
-
-
-		if int(usertime)>= int(1000):
-			if int(usertime)<= int(1259):
-				mtime6 = list(str(usertime))
-				mtime5 = (mtime6[0]) + (mtime6[1]) + (":") + (mtime6[2]) + (mtime6[3]) + (" A.M.")
-				print(mtime5)
+if (not ":" in usertime or not "am" in usertime or "a.m." not in (usertime or "A.M." not in (usertime) or "AM" not in (usertime) or "pm" not in (usertime) or "PM" not in (usertime) or "P.M." not in (usertime) or "p.m." not in (usertime)):
+elif 
+	if int(usertime) <= int(959):
+		mtime3 = list(str(usertime))
+		mtime2 = (mtime3[1]) + (":") + (mtime3[2]) + (mtime3[3]) + (" A.M.")
+		print(mtime2)
 
 
-		if int(usertime)>= int(1300):
-			if int(usertime)<= int(2159):
-				emtime4 = int(usertime) - int(1200)
-				emtime3 = list(str(emtime4))
-				emtime2 = (emtime3[0]) + (":") + (emtime3[1]) + (emtime3[2]) + (" P.M.")
-				print(emtime2)
+	if int(usertime)>= int(1000):
+		if int(usertime)<= int(1259):
+			mtime6 = list(str(usertime))
+			mtime5 = (mtime6[0]) + (mtime6[1]) + (":") + (mtime6[2]) + (mtime6[3]) + (" A.M.")
+			print(mtime5)
 
 
-		if int(usertime) >= int(2200):
-			if int(usertime) <= int(2459):
-				emtime7 = int(usertime) - int(1200)
-				emtime6 = list(str(emtime7))
-				emtime5 = (emtime6[0]) + (emtime6[1]) + (":") + (emtime6[2]) + (emtime6[3]) + (" P.M.")
-				print(emtime5)
+	if int(usertime)>= int(1300):
+		if int(usertime)<= int(2159):
+			emtime4 = int(usertime) - int(1200)
+			emtime3 = list(str(emtime4))
+			emtime2 = (emtime3[0]) + (":") + (emtime3[1]) + (emtime3[2]) + (" P.M.")
+			print(emtime2)
 
 
-'''if len(usertime) <= 3 or len(usertime) <= 8:
-	print("Invalid")'''
+	if int(usertime) >= int(2200):
+		if int(usertime) <= int(2459):
+			emtime7 = int(usertime) - int(1200)
+			emtime6 = list(str(emtime7))
+			emtime5 = (emtime6[0]) + (emtime6[1]) + (":") + (emtime6[2]) + (emtime6[3]) + (" P.M.")
+			print(emtime5)
+
+
+else:
+	print("Invalid")
+
