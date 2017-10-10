@@ -1,6 +1,12 @@
 
 usertime = input("Enter Time: ")
 
+regularam = list(usertime)
+regularpm = list(usertime)
+militarypm = list(usertime)
+militaryam = list(usertime)
+
+
 if("AM")in(usertime):
 	amtime3 = usertime.split(":")
 	amtime2 = amtime3[1].split("A")
@@ -8,28 +14,28 @@ if("AM")in(usertime):
 	print(amtime)
 
 
-if("A.M.")in(usertime):
+elif("A.M.")in(usertime):
         amtime3 = usertime.split(":")
         amtime2 = amtime3[1].split("A")
         amtime = ("0") + (amtime3[0]) + (amtime2[0])
         print(amtime)
 
 
-if("a.m.")in(usertime):
+elif("a.m.")in(usertime):
         amtime3 = usertime.split(":")
         amtime2 = amtime3[1].split("a")
         amtime = ("0") + (amtime3[0]) + (amtime2[0])
         print(amtime)
 
 
-if("am")in(usertime):
+elif("am")in(usertime):
         amtime3 = usertime.split(":")
         amtime2 = amtime3[1].split("a")
         amtime = ("0") + (amtime3[0]) + (amtime2[0])
         print(amtime)
 
 
-if("PM")in(usertime):
+elif("PM")in(usertime):
 	pmtime3 = usertime.split(":")
 	pmtime2 = pmtime3[1].split("P")
 	pmtime = (pmtime3[0]) + (pmtime2[0])
@@ -37,14 +43,14 @@ if("PM")in(usertime):
 	print(mpmtime)
 
 
-if("P.M.")in(usertime):
+elif("P.M.")in(usertime):
         amtime3 = usertime.split(":")
         amtime2 = amtime3[1].split("P")
         amtime = ("0") + (amtime3[0]) + (amtime2[0])
         print(amtime)
 
 
-if("p.m.")in(usertime):
+elif("p.m.")in(usertime):
         pmtime3 = usertime.split(":")
         pmtime2 = pmtime3[1].split("p")
         pmtime = (pmtime3[0]) + (pmtime2[0])
@@ -52,7 +58,7 @@ if("p.m.")in(usertime):
         print(mpmtime)
 
 
-if("pm")in(usertime):
+elif("pm")in(usertime):
         pmtime3 = usertime.split(":")
         pmtime2 = pmtime3[1].split("p")
         pmtime = (pmtime3[0]) + (pmtime2[0])
@@ -61,7 +67,7 @@ if("pm")in(usertime):
 
 
 if not ":"  in (usertime) or not "am"  in (usertime) or not "a.m." in (usertime) or not "A.M." in (usertime) or not "AM" in (usertime) or not "pm" in (usertime) or not "PM" in (usertime) or not "P.M." in (usertime) or not "p.m." in (usertime):
-	if len(usertime) == 4:
+	if len(usertime) == 4 and (usertime.isnumeric()):
 
 		if int(usertime) <= int(959):
 			mtime3 = list(str(usertime))
@@ -92,5 +98,5 @@ if not ":"  in (usertime) or not "am"  in (usertime) or not "a.m." in (usertime)
 				print(emtime5)
 
 
-'''if len(usertime) <= 3 or len(usertime) <= 8:
-	print("Invalid")'''
+else:
+	print("Invalid")
